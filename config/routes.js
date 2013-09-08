@@ -25,7 +25,7 @@
  * For convenience, you can also connect routes directly to views or external URLs.
  *
  */
-
+console.log( 'router loaded');
 module.exports.routes = {
 
   // By default, your root route (aka home page) points to a view
@@ -34,7 +34,16 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'home/index'
+  },  
+  '/about' : {
+    
+    controller: 'HomeController'
+  },
+  '/contact' : {
+    controller : 'HomeController',
+    action : 'contact'
   }
+  
 
   /*
   // But what if you want your home page to display
